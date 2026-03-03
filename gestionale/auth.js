@@ -54,6 +54,12 @@ async function login(username, password, rememberMe = false) {
     try {
         const auth = await getFirebaseAuthOrThrow();
         const email = formatUsernameToEmail(username);
+        
+        console.log('🔐 Tentativo di login con:', {
+            username: username,
+            email: email,
+            rememberMe: rememberMe
+        });
 
         const persistence = rememberMe
             ? firebase.auth.Auth.Persistence.LOCAL
@@ -63,6 +69,7 @@ async function login(username, password, rememberMe = false) {
         const credential = await auth.signInWithEmailAndPassword(email, password);
 
         if (credential && credential.user) {
+            console.log('✅ Login riuscito per:', credential.user.email);
             if (rememberMe) {
                 localStorage.setItem('gestionale_rememberMe', 'true');
             } else {
@@ -72,7 +79,10 @@ async function login(username, password, rememberMe = false) {
         }
         return false;
     } catch (err) {
-        console.error('Errore durante il login Firebase:', err);
+        console.error('❌ Errore durante il login Firebase:', err);
+        console.error('   Codice errore:', err.code);
+        console.error('   Messaggio:', err.message);
+        console.error('   Email utilizzata:', formatUsernameToEmail(username));
         throw err;
     }
 }
