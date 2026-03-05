@@ -7,7 +7,7 @@ Per permettere al form di prenotazione di salvare i dati (senza autenticazione),
 ### Passaggi:
 
 1. Vai su **Firebase Console**: https://console.firebase.google.com
-2. Seleziona il progetto: **sito-e8255**
+2. Seleziona il progetto: **camporosso-3140d**
 3. Vai su **Firestore Database** → **Regole**
 4. Sostituisci le regole con questo codice:
 

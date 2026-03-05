@@ -1,13 +1,13 @@
 // Configurazione Firebase
-// Credenziali progetto: sito-e8255
+// Credenziali progetto: camporosso-3140d
 const firebaseConfig = {
-    apiKey: 'AIzaSyBfQrKL0ZjE9xsei-ud6307OO5Ozguihz0',
-    authDomain: 'sito-e8255.firebaseapp.com',
-    projectId: 'sito-e8255',
-    storageBucket: 'sito-e8255.firebasestorage.app',
-    messagingSenderId: '478282659583',
-    appId: '1:478282659583:web:40b1494f1681bb74177eca',
-    measurementId: 'G-7X6FQSHLK5'
+    apiKey: 'AIzaSyAgHsgl1Y0NgKubA77u6fsHtUORA8CzGE0',
+    authDomain: 'camporosso-3140d.firebaseapp.com',
+    projectId: 'camporosso-3140d',
+    storageBucket: 'camporosso-3140d.firebasestorage.app',
+    messagingSenderId: '366784778430',
+    appId: '1:366784778430:web:0e3d553ed0355462678eef',
+    measurementId: 'G-8T3Q7WSYE3'
 };
 
 // Variabili globali Firebase
